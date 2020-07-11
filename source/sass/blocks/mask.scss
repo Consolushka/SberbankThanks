@@ -1,0 +1,13 @@
+.mask{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  background: #7A8080;
+  opacity: 0.9;
+
+  &--active{
+    opacity: 0;
+    z-index: -1;
+  }
+}

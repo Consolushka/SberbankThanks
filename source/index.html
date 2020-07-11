@@ -17,6 +17,50 @@
   <script src="js/picturepolyfill.js"></script><!-- Polyfill for adaptive pictures -->
 </head>
 <body>
-
+<div class="mask mask--active"></div>
+  <header class="header">
+    <div class="container">
+      <div class="header-wrapper">
+        <picture class="header__logo">
+          <source type="image/webp" srcset="img/logo@2x.webp 2x,img/logo@1x.webp 1x">
+          <source srcset="img/logo@2x.png 2x, img/logo@1x.png 1x">
+          <img src="img/logo@1x.png" alt="Логотип" width="180" height="80">
+        </picture>
+        <nav class="header__nav">
+          <ul class="header__nav-list list">
+            <li class="header__nav-list-item list-item base-text"><a href="#">Купоны и сертификаты</a></li>
+            <li class="header__nav-list-item list-item base-text"><a href="#">Впечатления</a></li>
+            <li class="header__nav-list-item list-item base-text"><a href="#">Авиабилеты</a></li>
+            <li class="header__nav-list-item list-item base-text"><a href="#">Ж/д билеты</a></li>
+            <li class="header__nav-list-item list-item base-text"><a href="#">Отели</a></li>
+            <li class="header__nav-list-item list-item base-text"><a href="#">Каршеринг</a></li>
+            <li class="header__nav-list-item list-item base-text"><a href="#">Театры</a></li>
+            <li class="header__nav-list-item list-item base-text"><a href="#">Страхование</a></li>
+            <li class="header__nav-list-item list-item base-text"><a href="#">Как подключиться</a></li>
+            <li class="header__nav-list-item list-item base-text list-item--active"><a href="#">Партнеры</a></li>
+          </ul>
+        </nav>
+        <div class="header__user">
+          <div class="header__user-location">
+            <button class="header__user-location-btn">
+              <svg width="24" height="24">
+                <use xlink:href="img/sprite.svg#icon-location"></use>
+              </svg>
+            </button>
+            <p>Санкт-Петербург</p>
+          </div>
+          <div class="header__user-events">
+            <button class="header__user-events-search">
+              <svg width="24" height="24">
+                <use xlink:href="img/sprite.svg#icon-find"></use>
+              </svg>
+            </button>
+            <button class="header__user-events-login btn">Войти</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
 </body>
 </html>
