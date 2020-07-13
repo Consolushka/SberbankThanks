@@ -2,4 +2,17 @@
   font-family: Geometria, Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
+
+  &--colored{
+    color: $color-base;
+  }
+}
+
+.title{
+  &--h2{
+    font-size: 48px;
+    line-height: 108%;
+    margin: 0 auto;
+    text-align: center;
+  }
 }

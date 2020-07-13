@@ -1,0 +1,159 @@
+.examples {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.examples__filter{
+  margin-bottom: 60px;
+}
+
+.examples__filter-cat {
+  text-align: center;
+  padding: 0 66px;
+  padding-left: 98px;
+  margin-bottom: 22px;
+}
+
+.examples__filter-cat-btn {
+  padding: 12px 13px;
+  margin-right: 8px;
+  margin-bottom: 5px;
+}
+
+.examples__filter-radio {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.examples__filter-radio-state {
+  max-width: 102px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.examples__filter-radio-btn {
+  width: 58px;
+  margin: 0 25px;
+}
+
+.examples__filter-radio-btn-slider {
+  display: block;
+  width: 18px;
+  background-color: $color-base;
+  border-radius: 50%;
+  height: 18px;
+  transition: transform 0.3s;
+
+  &--take {
+    transform: translateX(170%);
+  }
+}
+
+.examples__partners{
+  width: 100%;
+  text-align: center;
+}
+
+.examples__partners-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.examples__partners-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: $color-white;
+  border-radius: 8px;
+  padding: 20px;
+  width: 218px;
+  transition: box-shadow 0.3s;
+
+  &:hover{
+    box-shadow: 0 0 15px #7A8080;
+
+    .examples__partners-card-image{
+      transform: scale(1.05);
+    }
+  }
+}
+
+.examples__partners-card-percent{
+  align-self: flex-start;
+  margin-bottom: 4px;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.examples__partners-card-slogan{
+  font-size: 12px;
+  margin-bottom: 27px;
+  line-height: 15px;
+  opacity: 0.4;
+}
+
+.examples__partners-card-image{
+  margin-bottom: 18px;
+  transition: transform 0.3s;
+}
+
+.examples__partners-card-title{
+  font-size: 16px;
+  line-height: 20px;
+  opacity: 0.5;
+}
+
+.examples__partners-btn{
+  padding: 10px 20px;
+}
+
+.examples__offer{
+  width: 100%;
+}
+
+.examples__offer-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.examples__offer-card{
+  max-width: 377px;
+  display: block;
+}
+
+.examples__offer-card-image{
+  img{
+    margin-bottom: 15px;
+    border-radius: 6px;
+  }
+}
+
+.examples__offer-card-logo{
+  margin-right: 15px;
+}
+
+.examples__offer-card-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.examples__offer-card-info-name{
+  font-size: 14px;
+  line-height: 20px;
+  opacity: 0.5;
+}

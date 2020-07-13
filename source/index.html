@@ -18,49 +18,190 @@
 </head>
 <body>
 <div class="mask mask--active"></div>
-  <header class="header">
-    <div class="container">
-      <div class="header-wrapper">
-        <picture class="header__logo">
-          <source type="image/webp" srcset="img/logo@2x.webp 2x,img/logo@1x.webp 1x">
-          <source srcset="img/logo@2x.png 2x, img/logo@1x.png 1x">
-          <img src="img/logo@1x.png" alt="Логотип" width="180" height="80">
-        </picture>
-        <nav class="header__nav">
-          <ul class="header__nav-list list">
-            <li class="header__nav-list-item list-item base-text"><a href="#">Купоны и сертификаты</a></li>
-            <li class="header__nav-list-item list-item base-text"><a href="#">Впечатления</a></li>
-            <li class="header__nav-list-item list-item base-text"><a href="#">Авиабилеты</a></li>
-            <li class="header__nav-list-item list-item base-text"><a href="#">Ж/д билеты</a></li>
-            <li class="header__nav-list-item list-item base-text"><a href="#">Отели</a></li>
-            <li class="header__nav-list-item list-item base-text"><a href="#">Каршеринг</a></li>
-            <li class="header__nav-list-item list-item base-text"><a href="#">Театры</a></li>
-            <li class="header__nav-list-item list-item base-text"><a href="#">Страхование</a></li>
-            <li class="header__nav-list-item list-item base-text"><a href="#">Как подключиться</a></li>
-            <li class="header__nav-list-item list-item base-text list-item--active"><a href="#">Партнеры</a></li>
-          </ul>
-        </nav>
-        <div class="header__user">
-          <div class="header__user-location">
-            <button class="header__user-location-btn">
-              <svg width="24" height="24">
-                <use xlink:href="img/sprite.svg#icon-location"></use>
-              </svg>
-            </button>
-            <p>Санкт-Петербург</p>
-          </div>
-          <div class="header__user-events">
-            <button class="header__user-events-search">
-              <svg width="24" height="24">
-                <use xlink:href="img/sprite.svg#icon-find"></use>
-              </svg>
-            </button>
-            <button class="header__user-events-login btn">Войти</button>
-          </div>
+<header class="header">
+  <div class="container">
+    <div class="header-wrapper">
+      <picture class="header__logo">
+        <source type="image/webp" srcset="img/logo@2x.webp 2x,img/logo@1x.webp 1x">
+        <source srcset="img/logo@2x.png 2x, img/logo@1x.png 1x">
+        <img src="img/logo@1x.png" alt="Логотип" width="180" height="80">
+      </picture>
+      <nav class="header__nav">
+        <ul class="header__nav-list list">
+          <li class="header__nav-list-item list-item base-text"><a href="#">Купоны и сертификаты</a></li>
+          <li class="header__nav-list-item list-item base-text"><a href="#">Впечатления</a></li>
+          <li class="header__nav-list-item list-item base-text"><a href="#">Авиабилеты</a></li>
+          <li class="header__nav-list-item list-item base-text"><a href="#">Ж/д билеты</a></li>
+          <li class="header__nav-list-item list-item base-text"><a href="#">Отели</a></li>
+          <li class="header__nav-list-item list-item base-text"><a href="#">Каршеринг</a></li>
+          <li class="header__nav-list-item list-item base-text"><a href="#">Театры</a></li>
+          <li class="header__nav-list-item list-item base-text"><a href="#">Страхование</a></li>
+          <li class="header__nav-list-item list-item base-text"><a href="#">Как подключиться</a></li>
+          <li class="header__nav-list-item list-item base-text list-item--active"><a href="#">Партнеры</a></li>
+        </ul>
+      </nav>
+      <div class="header__user">
+        <div class="header__user-location">
+          <button class="header__user-location-btn">
+            <svg width="24" height="24">
+              <use xlink:href="img/sprite.svg#icon-location"></use>
+            </svg>
+          </button>
+          <p>Санкт-Петербург</p>
+        </div>
+        <div class="header__user-events">
+          <button class="header__user-events-search">
+            <svg width="24" height="24">
+              <use xlink:href="img/sprite.svg#icon-find"></use>
+            </svg>
+          </button>
+          <button class="header__user-events-login btn">Войти</button>
         </div>
       </div>
     </div>
-  </header>
-</div>
+  </div>
+</header>
+<main class="main">
+  <div class="container">
+    <h2 class="main__title title title--h2">Партнеры и предложения</h2>
+    <section class="examples">
+      <article class="examples__filter">
+        <div class="examples__filter-cat">
+          <button class="examples__filter-cat-btn btn btn--regular base-text">Все партнеры</button>
+          <button class="examples__filter-cat-btn btn btn--regular base-text">Популярное</button>
+          <button class="examples__filter-cat-btn btn btn--regular base-text">Супермаркеты</button>
+          <button class="examples__filter-cat-btn btn btn--regular base-text">Кафе и рестораны</button>
+          <button class="examples__filter-cat-btn btn btn--regular base-text">Такси</button>
+          <button class="examples__filter-cat-btn btn btn--regular base-text">Красота</button>
+          <button class="examples__filter-cat-btn btn btn--regular btn--colored base-text">Электроника и бытовая техника</button>
+          <button class="examples__filter-cat-btn btn btn--regular base-text">Зоотовары</button>
+          <button class="examples__filter-cat-btn btn btn--regular base-text">Кино и театр</button>
+          <button class="examples__filter-cat-btn btn btn--regular base-text">...</button>
+        </div>
+        <div class="examples__filter-radio">
+          <button class="examples__filter-radio-state examples__filter-radio-change base-text" data-state="give">Начисляют спасибо</button>
+          <button class="examples__filter-radio-btn btn btn--radio">
+            <span class="examples__filter-radio-btn-slider examples__filter-radio-change"></span>
+          </button>
+          <button class="examples__filter-radio-state examples__filter-radio-change base-text base-text--colored" data-state="take">Принимают спасибо</button>
+        </div>
+      </article>
+      <article class="examples__partners">
+        <div class="examples__partners-wrapper">
+          <div class="examples__partners-card">
+            <p class="examples__partners-card-percent">1,5%</p>
+            <p class="examples__partners-card-slogan">Спасибо от суммы покупки</p>
+            <a href="#" class="examples__partners-card-image">
+              <picture>
+                <source type="image/webp" srcset="img/MVideo@2x.webp 2x, img/MVideo@1x.webp 1x">
+                <source srcset="img/MVideo@2x.png 2x, img/MVideo@1x.png 1x">
+                <img src="img/MVideo@1x.png" width="120" height="120" alt="Логотип МВидео">
+              </picture>
+            </a>
+            <h4 class="examples__partners-card-title">М.Видео</h4>
+          </div>
+          <div class="examples__partners-card">
+            <p class="examples__partners-card-percent">3%</p>
+            <p class="examples__partners-card-slogan">Спасибо от суммы покупки</p>
+            <a href="#" class="examples__partners-card-image">
+              <picture>
+                <source type="image/webp" srcset="img/BurgerKing@2x.webp 2x, img/BurgerKing@1x.webp 1x">
+                <source srcset="img/BurgerKing@2x.png 2x, img/BurgerKing@1x.png 1x">
+                <img src="img/BurgerKing@1x.png" width="120" height="120" alt="Логотип Бургер Кинг">
+              </picture>
+            </a>
+            <h4 class="examples__partners-card-title">Бургер Кинг</h4>
+          </div>
+          <div class="examples__partners-card">
+            <p class="examples__partners-card-percent">4,5%</p>
+            <p class="examples__partners-card-slogan">Спасибо от суммы покупки</p>
+            <a href="#" class="examples__partners-card-image">
+              <picture>
+                <source type="image/webp" srcset="img/Holodilnik@2x.webp 2x, img/Holodilnik@1x.webp 1x">
+                <source srcset="img/Holodilnik@2x.png 2x, img/Holodilnik@1x.png 1x">
+                <img src="img/Holodilnik@1x.png" width="120" height="120" alt="Логотип Холодильники.ру">
+              </picture>
+            </a>
+            <h4 class="examples__partners-card-title">Холодильник.ру</h4>
+          </div>
+          <div class="examples__partners-card">
+            <p class="examples__partners-card-percent">От 1,5%</p>
+            <p class="examples__partners-card-slogan">Спасибо от суммы покупки</p>
+            <a href="#" class="examples__partners-card-image">
+              <picture>
+                <source type="image/webp" srcset="img/Bork@2x.webp 2x, img/Bork@1x.webp 1x">
+                <source srcset="img/Bork@2x.png 2x, img/Bork@1x.png 1x">
+                <img src="img/Bork@1x.png" width="120" height="120" alt="Логотип Bork">
+              </picture>
+            </a>
+            <h4 class="examples__partners-card-title">BORK</h4>
+          </div>
+          <div class="examples__partners-card">
+            <p class="examples__partners-card-percent">1,5%</p>
+            <p class="examples__partners-card-slogan">Спасибо от суммы покупки</p>
+            <a href="#" class="examples__partners-card-image">
+              <picture>
+                <source type="image/webp" srcset="img/EvroSet@2x.webp 2x, img/EvroSet@1x.webp 1x">
+                <source srcset="img/EvroSet@2x.png 2x, img/EvroSet@1x.png 1x">
+                <img src="img/EvroSet@1x.png" width="120" height="120" alt="Логотип Евросеть">
+              </picture>
+            </a>
+            <h4 class="examples__partners-card-title">Евросеть</h4>
+          </div>
+        </div>
+        <button class="btn btn--colored examples__partners-btn base-text">Еще 4 партнера</button>
+      </article>
+      <article class="examples__offer">
+        <h3 class="examples__offer-title">3 предложения в категории «Электроника и бытовая техника»</h3>
+        <div class="examples__offer-wrapper">
+          <a href="#" class="examples__offer-card">
+            <picture class="examples__offer-card-image">
+              <source type="image/webp" srcset="img/technopark-offer@2x.webp 2x,img/technopark-offer@1x.webp 1x">
+              <source srcset="img/technopark-offer@2x.png 2x,img/technopark-offer@1x.png 1x">
+              <img src="img/technopark-offer@1x.png" width="377" height="236" alt="Предложение Технопарка">
+            </picture>
+            <div class="examples__offer-card-wrapper">
+              <img src="img/Holodilnik@1x.png" alt="Логотип Технопарка" class="examples__offer-card-logo" width="50" height="50">
+              <div class="examples__offer-card-info">
+                <p class="examples__offer-card-info-name">Технопарк</p>
+                <p class="examples__offer-card-info-slogan base-text">20% спасибо за технику Electrolux</p>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="examples__offer-card">
+            <picture class="examples__offer-card-image">
+              <source type="image/webp" srcset="img/evroset-offer@2x.webp 2x,img/evroset-offer@1x.webp 1x">
+              <source srcset="img/evroset-offer@2x.png 2x,img/evroset-offer@1x.png 1x">
+              <img src="img/evroset-offer@1x.png" width="377" height="236" alt="Предложение Евросети">
+            </picture>
+            <div class="examples__offer-card-wrapper">
+              <img src="img/EvroSet@1x.png" alt="Логотип Евросети" class="examples__offer-card-logo" width="50" height="50">
+              <div class="examples__offer-card-info">
+                <p class="examples__offer-card-info-name">Евросеть</p>
+                <p class="examples__offer-card-info-slogan base-text">10% спасибо за покупки в черную пятницу</p>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="examples__offer-card">
+            <picture class="examples__offer-card-image">
+              <source type="image/webp" srcset="img/mvideo-offer@2x.webp 2x,img/mvideo-offer@1x.webp 1x">
+              <source srcset="img/mvideo-offer@2x.png 2x,img/mvideo-offer@1x.png 1x">
+              <img src="img/mvideo-offer@1x.png" width="377" height="236" alt="Предложение Мвидео">
+            </picture>
+            <div class="examples__offer-card-wrapper">
+              <img src="img/MVideo@1x.png" alt="Логотип Мвидео" class="examples__offer-card-logo" width="50" height="50">
+              <div class="examples__offer-card-info">
+                <p class="examples__offer-card-info-name">Мвидео</p>
+                <p class="examples__offer-card-info-slogan base-text">15% спасибо для студентов</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </article>
+    </section>
+  </div>
+</main>
+<script type="text/javascript" src="js/blocks/filter-slider.js"></script>
+<script type="text/javascript" src="js/blocks/scroll-carousel.js"></script>
 </body>
 </html>

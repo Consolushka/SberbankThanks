@@ -1,4 +1,42 @@
 .btn{
   border-radius: 8px;
   border: 1px solid $color-base;
+  transition: border 0.3s;
+
+  &--regular{
+    border: 1px solid $color-white;
+    color: $color-black;
+    background-color: $color-white;
+
+    &:hover,
+    &:active,
+    &:focus{
+      border-color: $color-base;
+    }
+  }
+
+  &--colored{
+    color: $color-white;
+    border: 1px solid $color-base;
+    background-color: $color-base;
+
+    &:hover,
+    &:active,
+    &:focus{
+      border-color: $color-white;
+    }
+  }
+
+  &--radio{
+    background-color: $color-white;
+    border: 1px solid #E4E6E9;
+    border-radius: 12px;
+    padding: 3px 4px;
+
+    &:hover,
+    &:active,
+    &:focus{
+      border-color: $color-base;
+    }
+  }
 }

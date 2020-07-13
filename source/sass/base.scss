@@ -5,9 +5,17 @@
   font-weight: 400;
 }
 
+@font-face {
+  font-family: "Geometria";
+  src: url("../fonts/Geometria-Medium.woff") format("woff");
+  font-style: normal;
+  font-weight: 500;
+}
+
 body {
   min-width: 320px;
   margin: 0;
+  background-color: #E5E5E5;
   font-family: Geometria, Arial, sans-serif;
   box-sizing: border-box;
 }
