@@ -56,6 +56,7 @@
 .examples__partners{
   width: 100%;
   text-align: center;
+  margin-bottom: 120px;
 }
 
 .examples__partners-wrapper{
@@ -121,17 +122,27 @@
   width: 100%;
 }
 
+.examples__offer-title{
+  padding: 0 158px;
+  margin-bottom: 34px;
+}
+
 .examples__offer-wrapper{
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
+  margin: 0 -30px;
+  padding: 0 30px;
+  overflow: hidden;
 }
 
 .examples__offer-card{
   max-width: 377px;
   display: block;
+  transition: 700ms;
 }
 
 .examples__offer-card-image{
@@ -156,4 +167,15 @@
   font-size: 14px;
   line-height: 20px;
   opacity: 0.5;
+}
+
+.examples__offer-btn{
+  position: absolute;
+  right: 0;
+  top: 110px;
+
+  &--prev{
+    left: 0;
+    right: auto;
+  }
 }

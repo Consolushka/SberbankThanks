@@ -152,9 +152,14 @@
         <button class="btn btn--colored examples__partners-btn base-text">Еще 4 партнера</button>
       </article>
       <article class="examples__offer">
-        <h3 class="examples__offer-title">3 предложения в категории «Электроника и бытовая техника»</h3>
+        <h3 class="examples__offer-title title title--h3">3 предложения в категории «Электроника и бытовая техника»</h3>
         <div class="examples__offer-wrapper">
-          <a href="#" class="examples__offer-card">
+          <button class="examples__offer-btn examples__offer-btn--prev arrow arrow--prev">
+            <svg width="10" height="20">
+              <use xlink:href="img/sprite.svg#icon-arrow"></use>
+            </svg>
+          </button>
+          <a href="#" class="examples__offer-card" id="first">
             <picture class="examples__offer-card-image">
               <source type="image/webp" srcset="img/technopark-offer@2x.webp 2x,img/technopark-offer@1x.webp 1x">
               <source srcset="img/technopark-offer@2x.png 2x,img/technopark-offer@1x.png 1x">
@@ -182,7 +187,7 @@
               </div>
             </div>
           </a>
-          <a href="#" class="examples__offer-card">
+          <a href="#" class="examples__offer-card" id="last">
             <picture class="examples__offer-card-image">
               <source type="image/webp" srcset="img/mvideo-offer@2x.webp 2x,img/mvideo-offer@1x.webp 1x">
               <source srcset="img/mvideo-offer@2x.png 2x,img/mvideo-offer@1x.png 1x">
@@ -196,6 +201,11 @@
               </div>
             </div>
           </a>
+          <button class="examples__offer-btn examples__offer-btn--next arrow">
+            <svg width="10" height="20">
+              <use xlink:href="img/sprite.svg#icon-arrow"></use>
+            </svg>
+          </button>
         </div>
       </article>
     </section>

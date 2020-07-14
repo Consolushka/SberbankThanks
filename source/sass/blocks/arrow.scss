@@ -1,0 +1,9 @@
+.arrow{
+  fill: none;
+  stroke: $color-base;
+  transform: scale(1.5);
+
+  &--prev{
+    transform: rotate(180deg) scale(1.5);
+  }
+}
