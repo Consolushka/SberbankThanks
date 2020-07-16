@@ -1,0 +1,76 @@
+.extra{
+  margin-bottom: 133px;
+}
+
+.extra-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 0 35px;
+}
+
+.extra__block-wrapper{
+  width: fit-content;
+  margin-bottom: 40px;
+
+  &--big-percent{
+    .extra__block-card {
+      position: relative;
+    }
+  }
+
+  &--personally{
+
+    .extra-title{
+      width: 327px;
+    }
+  }
+}
+
+.extra__big-percent-number{
+  position: absolute;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  color: $color-white;
+  top:0;
+  right: 0;
+  background-color: $color-black;
+  border-radius: 50%;
+}
+
+.extra__block{
+  border-radius: 80px;
+  background-color: $color-white;
+  padding: 19px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: fit-content;
+}
+
+.extra__block-card{
+  margin-right: 10px;
+
+  &:last-child{
+    margin: 0;
+  }
+}
+
+.extra-title{
+  font-weight: 500;
+  width: 270px;
+  margin: -10px auto 0;
+  padding: 20px 8px;
+  background-image: url("../../img/extra-mask.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-align: center;
+}

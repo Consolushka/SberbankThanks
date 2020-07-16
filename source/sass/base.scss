@@ -12,6 +12,13 @@
   font-weight: 500;
 }
 
+@font-face {
+  font-family: "Geometria";
+  src: url("../fonts/Geometria-Bold.woff") format("woff");
+  font-style: normal;
+  font-weight: 600;
+}
+
 body {
   min-width: 320px;
   margin: 0;

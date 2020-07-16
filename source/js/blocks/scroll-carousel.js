@@ -2,9 +2,6 @@ let wrapper = document.querySelector(".examples__offer-wrapper");
 let arr = wrapper.querySelectorAll(".examples__offer-card");
 let btnPrev = wrapper.querySelector(".examples__offer-btn--prev");
 let btnNext = wrapper.querySelector(".examples__offer-btn--next");
-
-
-console.log(wrapper.querySelector(".examples__offer-card").lastElementChild);
 btnPrev.addEventListener("click",()=>{
   wrapper.removeChild(wrapper.querySelector("#last"));
   wrapper.prepend(arr[2]);

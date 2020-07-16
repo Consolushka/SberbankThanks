@@ -120,6 +120,7 @@
 
 .examples__offer{
   width: 100%;
+  margin-bottom: 130px;
 }
 
 .examples__offer-title{
@@ -135,6 +136,7 @@
   align-items: flex-start;
   flex-wrap: wrap;
   margin: 0 -30px;
+  margin-bottom: 50px;
   padding: 0 30px;
   overflow: hidden;
 }
@@ -178,4 +180,9 @@
     left: 0;
     right: auto;
   }
+}
+
+.examples__offer-more-btn{
+  margin: 0 auto;
+  padding: 10px 20px;
 }
