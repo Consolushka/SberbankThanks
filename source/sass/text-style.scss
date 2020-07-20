@@ -6,6 +6,12 @@
   &--colored{
     color: $color-base;
   }
+
+  &--small{
+    font-size: 14px;
+    line-height: 18px;
+    opacity: 0.5;
+  }
 }
 
 .title{
