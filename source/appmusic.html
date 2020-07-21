@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="theme-color" content="#181617"><!-- Coloring Top Bar of mobile Chrome-->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Meta for viewport -->
+  <title>Спасибо от Сбербанка. App store</title>
+
+  <link rel="stylesheet" href="css/style-base.css"><!-- Styles connection -->
+  <link rel="stylesheet" href="css/style-appstore.css"><!-- Styles connection -->
+  <link rel="preload" href="fonts/" type="font/" as="font" crossorigin="anonymous"><!-- Fonts preload -->
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script><!-- JQuery -->
+  <script src="js/svg4everybody.js"></script><!-- SvgSprite polyfill -->
+  <script>svg4everybody();</script>
+  <script src="js/picturepolyfill.js"></script><!-- Polyfill for adaptive pictures -->
+</head>
+<body>
+<div class="mask mask--active"></div>
+
+<header class="header">
+  <div class="container">
+    <div class="header-wrapper">
+      <picture class="header__logo">
+        <source type="image/webp" srcset="img/logo@2x.webp 2x,img/logo@1x.webp 1x">
+        <source srcset="img/logo@2x.png 2x, img/logo@1x.png 1x">
+        <img src="img/logo@1x.png" alt="Логотип" width="180" height="80">
+      </picture>
+      <nav class="header__nav">
+        <ul class="list">
+          <li class="list-item base-text"><a href="#">Купоны и сертификаты</a></li>
+          <li class="list-item base-text"><a href="#">Впечатления</a></li>
+          <li class="list-item base-text"><a href="#">Авиабилеты</a></li>
+          <li class="list-item base-text"><a href="#">Ж/д билеты</a></li>
+          <li class="list-item base-text"><a href="#">Отели</a></li>
+          <li class="list-item base-text"><a href="#">Каршеринг</a></li>
+          <li class="list-item base-text"><a href="#">Театры</a></li>
+          <li class="list-item base-text"><a href="#">Страхование</a></li>
+          <li class="list-item base-text"><a href="#">Как подключиться</a></li>
+          <li class="list-item base-text list-item--active"><a href="#">Партнеры</a></li>
+        </ul>
+      </nav>
+      <div class="header__user">
+        <div class="header__user-location">
+          <button class="header__user-location-btn">
+            <svg width="24" height="24">
+              <use xlink:href="img/sprite.svg#icon-location"></use>
+            </svg>
+          </button>
+          <p>Санкт-Петербург</p>
+        </div>
+        <div class="header__user-events">
+          <button class="header__user-events-search">
+            <svg width="24" height="24">
+              <use xlink:href="img/sprite.svg#icon-find"></use>
+            </svg>
+          </button>
+          <button class="header__user-events-login btn">Войти</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="partner">
+  <div class="container">
+    <p class="partner__path base-text base-text--small">Скидочные купоны · Развлечения</p>
+    <h2 class="partner__title title title--h2"><span id="partnerName">Apple Music</span> за СПАСИБО</h2>
+    <section class="partner__info">
+      <article class="partner__info-promo">
+        <picture class="partner__info-promo-image-wrapper">
+          <source type="image/webp" srcset="img/appstore@2x.webp 2x, img/appstore@1x.webp 1x">
+          <source srcset="img/appstore@2x.png 2x, img/appstore@1x.png 1x">
+          <img src="img/appstore@1x.png" alt="" class="partner__info-promo-image">
+        </picture>
+      </article>
+      <article class="partner__info-about"></article>
+      <article class="partner__info-use"></article>
+    </section>
+  </div>
+</main>
+
+</body>
+</html>

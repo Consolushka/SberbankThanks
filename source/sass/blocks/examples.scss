@@ -1,3 +1,7 @@
+$color-black: #000000;
+$color-base: #00D36D;
+$color-white: #ffffff;
+
 .examples {
   display: flex;
   flex-direction: column;
@@ -120,6 +124,7 @@
 
 .examples__offer{
   width: 100%;
+  text-align: center;
   margin-bottom: 118px;
 }
 
@@ -143,6 +148,7 @@
 
 .examples__offer-card{
   max-width: 377px;
+  text-align: left;
   display: block;
   transition: 700ms;
 }

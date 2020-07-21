@@ -8,6 +8,8 @@ var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var csso = require("gulp-csso");
 var rename = require("gulp-rename");
+var tap = require("gulp-tap");
+var log = require('fancy-log');
 
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
@@ -18,7 +20,7 @@ var del = require("del");
 var server = require("browser-sync").create();
 
 gulp.task("css", function () {
-  return gulp.src("source/sass/style.scss")
+  return gulp.src("source/sass/style-*.scss")
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
@@ -26,7 +28,12 @@ gulp.task("css", function () {
       autoprefixer()
     ]))
     .pipe(csso())
-    .pipe(rename("style.min.css"))
+    .pipe(rename(tap(file => {
+      const path = file.path.toString();
+      var a = path.split("\\");
+      var b =a[a.length-1].split(".")[0]+".min.css";
+      return b;
+    })))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("source/css"))
     .pipe(server.stream());
