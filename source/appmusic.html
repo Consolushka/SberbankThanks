@@ -12,6 +12,9 @@
   <link rel="stylesheet" href="css/style-appstore.css"><!-- Styles connection -->
   <link rel="preload" href="fonts/" type="font/" as="font" crossorigin="anonymous"><!-- Fonts preload -->
 
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=5f0cb0d8-7b61-497b-bd94-871db3355383&lang=ru_RU"
+          type="text/javascript">
+  </script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script><!-- JQuery -->
   <script src="js/svg4everybody.js"></script><!-- SvgSprite polyfill -->
   <script>svg4everybody();</script>
@@ -157,7 +160,7 @@
             <a class="partner__shop-location-item-phone"></a>
             <p class="partner__shop-location-item-info-time">Ежедневно с 09:00 до 21:00</p>
             <a href="#" class="partner__shop-location-item-info-site link">apple.com</a>
-            <button class="partner__shop-location-item-info-route">Проложить маршрут</button>
+            <button class="partner__shop-location-item-info-route" data-geox="55.739787" data-geoy="37.633517">Проложить маршрут</button>
           </div>
         </article>
         <article class="partner__shop-location-item">
@@ -167,7 +170,7 @@
             <img src="img/apple.png" alt="" width="30" height="30">
           </picture>
           <div class="partner__shop-location-item-info">
-            <p class="partner__shop-location-item-info-address">Москва, ул. Большая Татарская, 21</p>
+            <p class="partner__shop-location-item-info-address">Ленинградское шоссе, 16Ас4</p>
             <div class="partner__shop-location-item-info-subway">
               <svg class="subway subway--2" width="20" height="15">
                 <use xlink:href="img/sprite.svg#icon-subway"></use>
@@ -181,7 +184,7 @@
             <a class="partner__shop-location-item-phone"></a>
             <p class="partner__shop-location-item-info-time">Ежедневно с 09:00 до 21:00</p>
             <a href="#" class="partner__shop-location-item-info-site link">apple.com</a>
-            <button class="partner__shop-location-item-info-route">Проложить маршрут</button>
+            <button class="partner__shop-location-item-info-route" data-geox="55.823437" data-geoy="37.497167">Проложить маршрут</button>
           </div>
         </article>
         <article class="partner__shop-location-item">
@@ -191,7 +194,7 @@
             <img src="img/apple.png" alt="" width="30" height="30">
           </picture>
           <div class="partner__shop-location-item-info">
-            <p class="partner__shop-location-item-info-address">Москва, ул. Большая Татарская, 21</p>
+            <p class="partner__shop-location-item-info-address">Хадынский бульвар, 4</p>
             <div class="partner__shop-location-item-info-subway">
               <svg class="subway subway--2" width="20" height="15">
                 <use xlink:href="img/sprite.svg#icon-subway"></use>
@@ -205,13 +208,87 @@
             <a class="partner__shop-location-item-phone"></a>
             <p class="partner__shop-location-item-info-time">Ежедневно с 09:00 до 21:00</p>
             <a href="#" class="partner__shop-location-item-info-site link">apple.com</a>
-            <button class="partner__shop-location-item-info-route">Проложить маршрут</button>
+            <button class="partner__shop-location-item-info-route" id="ttr" data-geox="55.790781" data-geoy="37.529935">Проложить маршрут</button>
           </div>
         </article>
       </div>
+      <div class="partner__shop-map" id="map"></div>
+    </section>
+    <section class="partner__map">
     </section>
   </div>
 </main>
-
+<footer class="footer">
+  <div class="container">
+    <div class="footer-wrapper">
+      <div class="footer__info">
+        <h3 class="title title--h3">900</h3>
+        <p class="footer__info-call base-text base-text--small">По России бесплатно</p>
+        <img class="footer__info-logo" src="img/sberlogo.svg" width="159" height="40" alt="Логотип Сбербанка">
+        <p class="footer__info-create base-text base-text--small">© 1997—2019 ПАО Сбербанк.</p>
+      </div>
+      <div class="footer-second-wrapper">
+        <div class="footer__nav">
+          <ul class="list">
+            <li class="footer__nav-item list-item base-text"><a href="#">Купоны и сертификаты</a></li>
+            <li class="footer__nav-item list-item base-text"><a href="#">Впечатления</a></li>
+            <li class="footer__nav-item list-item base-text"><a href="#">Авиабилеты</a></li>
+            <li class="footer__nav-item list-item base-text"><a href="#">Ж/д билеты</a></li>
+            <li class="footer__nav-item list-item base-text"><a href="#">Отели</a></li>
+            <li class="footer__nav-item list-item base-text"><a href="#">Каршеринг</a></li>
+            <li class="footer__nav-item list-item base-text"><a href="#">Театры</a></li>
+            <li class="footer__nav-item list-item base-text"><a href="#">Страхование</a></li>
+            <li class="footer__nav-item list-item base-text"><a href="#">Как подключиться</a></li>
+            <li class="footer__nav-item list-item base-text list-item--active"><a href="#">Партнеры</a></li>
+          </ul>
+        </div>
+        <div class="footer__socials">
+          <div class="footer__socials-down">
+            <a href="#">
+              <img src="img/icon-googleplay.svg" width="130" height="40" alt="">
+            </a>
+            <a href="#">
+              <svg width="130" height="40">
+                <use xlink:href="img/sprite.svg#icon-appstore"></use>
+              </svg>
+            </a>
+          </div>
+          <ul class="footer__socials-list">
+            <li class="footer__socials-list-item">
+              <a href="#">
+                <svg width="40" height="40">
+                  <use xlink:href="img/sprite.svg#icon-ok"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__socials-list-item">
+              <a href="#">
+                <svg width="40" height="40">
+                  <use xlink:href="img/sprite.svg#icon-fb"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__socials-list-item">
+              <a href="#">
+                <svg width="40" height="40">
+                  <use xlink:href="img/sprite.svg#icon-vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__socials-list-item">
+              <a href="#">
+                <img src="img/icon-inst.svg" width="40" height="40" alt="">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <p class="footer__copy base-text base-text--small">
+          <u>Политика</u> АО «ЦПЛ» в отношении обработки персональных данных и <u>Согласие</u> на обработку данных участника Программы «Спасибо от Сбербанка»
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript" src="js/blocks/map.js"></script>
 </body>
 </html>
