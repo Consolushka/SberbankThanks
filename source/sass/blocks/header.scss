@@ -72,19 +72,28 @@
 
   &:hover,
   &:active,
-  &focus{
+  &focus {
     opacity: 1;
   }
 }
 
-.header__user-events-login{
+.header__user-events-modal {
+  position: absolute;
+  z-index: 3;
+  top: 60px;
+  right: 229px;
+  background-color: $color-white;
+  padding: 12px;
+}
+
+.header__user-events-login {
   padding: 10px 24px;
   color: $color-base;
-  transition: color  0.3s, border 0.3s;
+  transition: color 0.3s, border 0.3s;
 
   &:hover,
   &:active,
-  &focus{
+  &focus {
     color: $color-black;
     border-color: $color-black;
   }

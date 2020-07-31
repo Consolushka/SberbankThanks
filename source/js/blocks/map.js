@@ -5,16 +5,18 @@ ymaps.ready(init);
 
 function init() {
 
-  var geoArrX = [];
-  var geoArrY = [];
+  var Array = [];
+  var multiRoute = new ymaps.multiRouter.MultiRoute({
+    referencePoints: [
+      [55.831999, 37.554834],
+      [55.831999, 37.554834]
+    ]
+  });
   var btnsAll = document.querySelectorAll(".partner__shop-location-item-info-route");
   var wrappers = document.querySelectorAll(".partner__shop-location-item");
   for (var i = 0; i < btnsAll.length; i++) {
-    geoArrX.push(btnsAll[i].dataset.geox);
-    geoArrY.push(btnsAll[i].dataset.geoy);
+    Array.push({'geoX': btnsAll[i].dataset.geox, 'geoY': btnsAll[i].dataset.geoy, 'Address': btnsAll[i].dataset.address});
   }
-  console.log(geoArrX, geoArrY);
-  console.log(Number(geoArrX[0]));
   // Создание экземпляра карты и его привязка к контейнеру с
   // заданным id ("map").
   myMap = new ymaps.Map('map', {
@@ -25,35 +27,28 @@ function init() {
   }, {
     searchControlProvider: 'yandex#search'
   });
-  for (i = 0; i < geoArrX.length; i++) {
-    console.log(i);
+  for (i = 0; i < Array.length; i++) {
     myMap.geoObjects
-      .add(new ymaps.Placemark([Number(geoArrX[i]), Number(geoArrY[i])], {
-        balloonContent: 'цвет <strong>красный</strong>'
+      .add(new ymaps.Placemark([Number(Array[i].geoX), Number(Array[i].geoY)], {
+        balloonContent: 'Адрес: <br>' + Array[i].Address
       }, {
         iconLayout: 'default#image',
         iconImageHref: 'img/apple.png',
         iconImageSize: [20, 20]
       }))
   }
-
   btnsAll.forEach(function (btn, j) {
     btn.addEventListener("click", function () {
       for (i = 0; i < wrappers.length; i++) {
         wrappers[i].classList.remove("partner__shop-location-item--active");
       }
       wrappers[j].classList.add("partner__shop-location-item--active");
-      myMap.geoObjects.remove(multiRoute);
       console.log("click");
-      var multiRoute = new ymaps.multiRouter.MultiRoute({
-        // Точки маршрута. Точки могут быть заданы как координатами, так и адресом.
-        referencePoints: [
-          [55.831999, 37.554834],
-          [geoArrX[j], geoArrY[j]],
-        ]
-      }, {
-        // Автоматически устанавливать границы карты так,
-        // чтобы маршрут был виден целиком.
+      multiRoute.model.setReferencePoints([
+        [55.831999, 37.554834],
+        [Array[j].geoX, Array[j].geoY]
+      ]);
+      multiRoute.model.setParams({
         boundsAutoApply: true
       });
 

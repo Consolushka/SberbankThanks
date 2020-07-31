@@ -1,0 +1,32 @@
+.form {
+
+  &--search {
+    border-bottom: 1px solid #c2c4c6;
+  }
+}
+
+.form__input {
+
+  &--search {
+    border: none;
+    outline: none;
+  }
+
+  &::placeholder {
+    color: #9fa7ab;
+  }
+}
+
+.form__submit {
+
+  &--search {
+    fill: none;
+    stroke: #c2c4c6;
+
+    &:hover,
+    &:active,
+    &:focus {
+      stroke: darken(#c2c4c6, 30%);
+    }
+  }
+}

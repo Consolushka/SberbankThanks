@@ -21,16 +21,18 @@
   <script src="js/picturepolyfill.js"></script><!-- Polyfill for adaptive pictures -->
 </head>
 <body>
-<div class="mask mask--active"></div>
+<div class="mask"></div>
 
 <header class="header">
   <div class="container">
     <div class="header-wrapper">
-      <picture class="header__logo">
-        <source type="image/webp" srcset="img/logo@2x.webp 2x,img/logo@1x.webp 1x">
-        <source srcset="img/logo@2x.png 2x, img/logo@1x.png 1x">
-        <img src="img/logo@1x.png" alt="Логотип" width="180" height="80">
-      </picture>
+      <a href="index.html">
+        <picture class="header__logo">
+          <source type="image/webp" srcset="img/logo@2x.webp 2x,img/logo@1x.webp 1x">
+          <source srcset="img/logo@2x.png 2x, img/logo@1x.png 1x">
+          <img src="img/logo@1x.png" alt="Логотип" width="180" height="80">
+        </picture>
+      </a>
       <nav class="header__nav">
         <ul class="list">
           <li class="list-item base-text"><a href="#">Купоны и сертификаты</a></li>
@@ -60,6 +62,18 @@
               <use xlink:href="img/sprite.svg#icon-find"></use>
             </svg>
           </button>
+          <div class="modal header__user-events-modal">
+            <form class="form form--search header__user-events-modal-form">
+              <label>
+                <input type="text" class="form__input form__input--search" placeholder="Поиск">
+                <button type="submit" class="form__submit form__submit--search">
+                  <svg width="24" height="24">
+                    <use xlink:href="img/sprite.svg#icon-find"></use>
+                  </svg>
+                </button>
+              </label>
+            </form>
+          </div>
           <button class="header__user-events-login btn">Войти</button>
         </div>
       </div>
@@ -160,7 +174,7 @@
             <a class="partner__shop-location-item-phone"></a>
             <p class="partner__shop-location-item-info-time">Ежедневно с 09:00 до 21:00</p>
             <a href="#" class="partner__shop-location-item-info-site link">apple.com</a>
-            <button class="partner__shop-location-item-info-route" data-geox="55.739787" data-geoy="37.633517">Проложить маршрут</button>
+            <button class="partner__shop-location-item-info-route" data-geox="55.739787" data-geoy="37.633517" data-address="Москва, ул. Большая Татарская, 21">Проложить маршрут</button>
           </div>
         </article>
         <article class="partner__shop-location-item">
@@ -184,7 +198,7 @@
             <a class="partner__shop-location-item-phone"></a>
             <p class="partner__shop-location-item-info-time">Ежедневно с 09:00 до 21:00</p>
             <a href="#" class="partner__shop-location-item-info-site link">apple.com</a>
-            <button class="partner__shop-location-item-info-route" data-geox="55.823437" data-geoy="37.497167">Проложить маршрут</button>
+            <button class="partner__shop-location-item-info-route" data-geox="55.823437" data-geoy="37.497167" data-address="Ленинградское шоссе, 16Ас4">Проложить маршрут</button>
           </div>
         </article>
         <article class="partner__shop-location-item">
@@ -208,7 +222,7 @@
             <a class="partner__shop-location-item-phone"></a>
             <p class="partner__shop-location-item-info-time">Ежедневно с 09:00 до 21:00</p>
             <a href="#" class="partner__shop-location-item-info-site link">apple.com</a>
-            <button class="partner__shop-location-item-info-route" id="ttr" data-geox="55.790781" data-geoy="37.529935">Проложить маршрут</button>
+            <button class="partner__shop-location-item-info-route" data-geox="55.790781" data-geoy="37.529935" data-address="Хадынский бульвар, 4">Проложить маршрут</button>
           </div>
         </article>
       </div>
@@ -289,6 +303,7 @@
     </div>
   </div>
 </footer>
+<script type="text/javascript" src="js/blocks/search.js"></script>
 <script type="text/javascript" src="js/blocks/map.js"></script>
 </body>
 </html>
