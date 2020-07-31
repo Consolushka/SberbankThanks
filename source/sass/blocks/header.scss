@@ -64,6 +64,7 @@
 
 .header__user-events-search{
   fill: none;
+  outline: none;
   margin-left: 15px;
   margin-right: 14px;
   stroke: $color-black;
@@ -87,6 +88,7 @@
 }
 
 .header__user-events-login {
+  outline: none;
   padding: 10px 24px;
   color: $color-base;
   transition: color 0.3s, border 0.3s;

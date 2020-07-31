@@ -2,8 +2,23 @@
   fill: none;
   stroke: $color-base;
   transform: scale(1.5);
+  outline: none;
+  transition: 0.3s;
 
-  &--prev{
+  &:hover,
+  &:active,
+  &:focus {
+    transform: scale(2);
+    stroke: lighten($color-base, 10%);
+  }
+
+  &--prev {
     transform: rotate(180deg) scale(1.5);
+
+    &:hover,
+    &:active,
+    &:focus {
+      transform: rotate(180deg) scale(1.5);
+    }
   }
 }
